@@ -7,10 +7,10 @@ export default function TodoItem({item,todos,setTodos}){
        
     }
     function handleClick(name){
-    //    console.log("Item text clicked",name) 
-    const newArray=todos.map((todo)=>todo.name===name ?{...todo,done:!todo.done}:todo
-)
-setTodos(newArray)
+    
+    
+setTodos(todos.map((todo)=>todo.name===name ?{...todo,done:!todo.done}:todo
+))
 
     }
     const cName =item.done ? styles.completed : ""
